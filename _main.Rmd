@@ -1,0 +1,299 @@
+--- 
+title: "Lymphoma Treatment 2022"
+author: "Jeff Cromwell PhD"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+# url: your book url like https://bookdown.org/yihui/bookdown
+cover-image:
+description: |
+  This book is about Lymphoma Treatments.
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+---
+
+# A Compendium of Mathematical Models for Germinal-Center Diffuse Large B Cell Lymphoma 
+
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```
+
+
+```{r tab01, tidy=FALSE,echo=FALSE}
+library(DT)
+df1<-as.data.frame(read.csv("csv-germinalce-set.csv"))
+matchingList <- c("ï..PMID", "Title")
+df2 <- df1[, which((names(df1) %in% matchingList)==TRUE)]
+datatable(df2, options = list(pageLength = 25))
+```
+
+
+## Monoclonal antibodies 
+
+```{r tab02, tidy=FALSE,echo=FALSE}
+library(DT)
+df1<-as.data.frame(read.csv("csv-monoclonal-set.csv"))
+matchingList <- c("ï..PMID", "Title")
+df2 <- df1[, which((names(df1) %in% matchingList)==TRUE)]
+df3<-head(df2,4000)
+datatable(df3, options = list(pageLength = 25))
+```
+
+## RCHOP
+
+```{r tab03, tidy=FALSE,echo=FALSE}
+library(DT)
+df1<-as.data.frame(read.csv("csv-RCHOPlymph-set.csv"))
+matchingList <- c("ï..PMID", "Title")
+df2 <- df1[, which((names(df1) %in% matchingList)==TRUE)]
+df3<-head(df2,4000)
+datatable(df3, options = list(pageLength = 25))
+```
+
+```{r, eval=FALSE}
+bookdown::render_book()
+```
+
+## Radiation and Radio Therapy
+
+```{r eval=FALSE}
+bookdown::serve_book()
+```
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
+
+```{r tab05, tidy=FALSE,echo=FALSE}
+library(DT)
+df1<-as.data.frame(read.csv("csv-radiationt-set.csv"))
+matchingList <- c("ï..PMID", "Title")
+df2 <- df1[, which((names(df1) %in% matchingList)==TRUE)]
+df3<-head(df2,4000)
+datatable(df3, options = list(pageLength = 25))
+```
+
+## Medicinal Plants
+
+```{r tab04, tidy=FALSE,echo=FALSE}
+library(DT)
+df1<-as.data.frame(read.csv("csv-medicinalp-set.csv"))
+matchingList <- c("ï..PMID", "Title")
+df2 <- df1[, which((names(df1) %in% matchingList)==TRUE)]
+datatable(df2, options = list(pageLength = 25))
+```
+
+<!--chapter:end:index.Rmd-->
+
+# RCHOP
+
+## Rituximab
+
+```{r tab2, tidy=FALSE,echo=FALSE}
+library(DT)
+df1<-as.data.frame(read.csv("PubChem_pubmed_text_Rituximab target genes.csv"))
+matchingList <- c("ï..pmid", "articletitle")
+df2 <- df1[, which((names(df1) %in% matchingList)==TRUE)]
+df3<-head(df2,4000)
+datatable(df3, options = list(pageLength = 25))
+```
+
+## Vincristine
+
+```{r tab3, tidy=FALSE,echo=FALSE}
+library(DT)
+df1<-as.data.frame(read.csv("PubChem_pubmed_text_Vincristine target genes.csv"))
+matchingList <- c("ï..pmid", "articletitle")
+df2 <- df1[, which((names(df1) %in% matchingList)==TRUE)]
+df3<-head(df2,4000)
+datatable(df3, options = list(pageLength = 25))
+```
+
+## Doxorubicin
+
+```{r tab4, tidy=FALSE,echo=FALSE}
+library(DT)
+df1<-as.data.frame(read.csv("PubChem_pubmed_text_Doxorubicin target genes.csv"))
+matchingList <- c("ï..pmid", "articletitle")
+df2 <- df1[, which((names(df1) %in% matchingList)==TRUE)]
+df3<-head(df2,4000)
+datatable(df3, options = list(pageLength = 25))
+```
+
+## Cyclophosphamide
+
+```{r tab5, tidy=FALSE,echo=FALSE}
+library(DT)
+df1<-as.data.frame(read.csv("PubChem_pubmed_text_Cyclophosphamide target genes.csv"))
+matchingList <- c("ï..pmid", "articletitle")
+df2 <- df1[, which((names(df1) %in% matchingList)==TRUE)]
+df3<-head(df2,4000)
+datatable(df3, options = list(pageLength = 25))
+```
+
+## Prednisone
+
+```{r tab6, tidy=FALSE,echo=FALSE}
+library(DT)
+df1<-as.data.frame(read.csv("PubChem_pubmed_text_Prednisone target genes.csv"))
+matchingList <- c("ï..pmid", "articletitle")
+df2 <- df1[, which((names(df1) %in% matchingList)==TRUE)]
+df3<-head(df2,4000)
+datatable(df3, options = list(pageLength = 25))
+```
+
+<!--chapter:end:01-intro.Rmd-->
+
+# Radiation Treatment {#cross}
+
+```{r tab30, tidy=FALSE,echo=FALSE}
+library(DT)
+df1<-as.data.frame(read.csv("csv-radiationt-set.csv"))
+matchingList <- c("ï..PMID", "Title")
+df2 <- df1[, which((names(df1) %in% matchingList)==TRUE)]
+#df3<-head(df2,4000)
+datatable(df2, options = list(pageLength = 25))
+```
+
+## Dose
+
+```{r tab31, tidy=FALSE,echo=FALSE}
+library(DT)
+df1<-as.data.frame(read.csv("csv-radiationd-set.csv"))
+matchingList <- c("ï..PMID", "Title")
+df2 <- df1[, which((names(df1) %in% matchingList)==TRUE)]
+df3<-head(df2,4000)
+datatable(df3, options = list(pageLength = 25))
+```
+
+
+## Sickness
+
+
+```{r tab32, tidy=FALSE,echo=FALSE}
+library(DT)
+df1<-as.data.frame(read.csv("csv-radiations-set.csv"))
+matchingList <- c("ï..PMID", "Title")
+df2 <- df1[, which((names(df1) %in% matchingList)==TRUE)]
+df3<-head(df2,4000)
+datatable(df3, options = list(pageLength = 25))
+```
+
+<!--chapter:end:02-cross-refs.Rmd-->
+
+# Radio Therapy
+
+
+
+```{r tab40, tidy=FALSE,echo=FALSE}
+library(DT)
+df1<-as.data.frame(read.csv("csv-radiothera-set.csv"))
+matchingList <- c("ï..PMID", "Title")
+df2 <- df1[, which((names(df1) %in% matchingList)==TRUE)]
+df3<-head(df2,4000)
+datatable(df3, options = list(pageLength = 25))
+```
+
+
+<!--chapter:end:03-parts.Rmd-->
+
+# Lymphatic System
+
+
+```{r tab70, tidy=FALSE,echo=FALSE}
+library(DT)
+
+df1<-as.data.frame(read.csv("csv-LymphaticS-set.csv"))
+matchingList <- c("ï..PMID", "Title")
+df2 <- df1[, which((names(df1) %in% matchingList)==TRUE)]
+df3<-head(df2,4000)
+datatable(df3, options = list(pageLength = 25))
+```
+
+## Lymph Nodes
+
+```{r tab71, tidy=FALSE,echo=FALSE}
+library(DT)
+df1<-as.data.frame(read.csv("csv-LymphNodel-set.csv"))
+matchingList <- c("ï..PMID", "Title")
+df2 <- df1[, which((names(df1) %in% matchingList)==TRUE)]
+df3<-head(df2,4000)
+datatable(df3, options = list(pageLength = 25))
+```
+
+## Lymph
+
+
+```{r tab72, tidy=FALSE,echo=FALSE}
+library(DT)
+df1<-as.data.frame(read.csv("csv-Lymphlymph-set.csv"))
+matchingList <- c("ï..PMID", "Title")
+df2 <- df1[, which((names(df1) %in% matchingList)==TRUE)]
+df3<-head(df2,4000)
+datatable(df3, options = list(pageLength = 25))
+```
+
+<!--chapter:end:04-citations.Rmd-->
+
+# Total Blood Count
+
+
+```{r tab80, tidy=FALSE,echo=FALSE}
+library(DT)
+df1<-as.data.frame(read.csv("csv-TotalBlood-set.csv"))
+matchingList <- c("ï..PMID", "Title")
+df2 <- df1[, which((names(df1) %in% matchingList)==TRUE)]
+df3<-head(df2,4000)
+datatable(df3, options = list(pageLength = 25))
+```
+
+## Lymphocytes
+
+
+```{r tab81, tidy=FALSE,echo=FALSE}
+library(DT)
+df1<-as.data.frame(read.csv("csv-Lymphocyte-set.csv"))
+matchingList <- c("ï..PMID", "Title")
+df2 <- df1[, which((names(df1) %in% matchingList)==TRUE)]
+df3<-head(df2,4000)
+datatable(df3, options = list(pageLength = 25))
+```
+
+
+## Genomics
+
+
+```{r tab83, tidy=FALSE,echo=FALSE}
+library(DT)
+df1<-as.data.frame(read.csv("csv-genomicsly-set.csv"))
+matchingList <- c("ï..PMID", "Title")
+df2 <- df1[, which((names(df1) %in% matchingList)==TRUE)]
+df3<-head(df2,4000)
+datatable(df3, options = list(pageLength = 25))
+```
+
+<!--chapter:end:05-blocks.Rmd-->
+
+# Compendium Of Mathematical Models
+
+```{r setup2, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```
+For more information consider the new book schedule for release in October 2022 entitled, A Compendium of Mathematical Models for Germinal-Center Diffuse Large B Cell Lymphoma Volume 1 by Jeff Cromwell, PhD
+
+## Additional Titles 
+
+Please visit the Mathematical Learning Space Research Portfolio for additional books at mathlearningspace.weebly.com and the instagram page at mathmusicbiology. 
+
+<!--chapter:end:06-share.Rmd-->
+
+`r if (knitr::is_html_output()) '
+# References {-}
+'`
+
+<!--chapter:end:07-references.Rmd-->
+
